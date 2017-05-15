@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "venerablekryten",
+  "private_key_id": "c0376532cecad72657477c6dfcea130955645fb3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQ7SgCYJXzmGkh\n/YqtfRjsoTs76f1CpVB2JQsnwKQuxtqjxiWAIYLXFtTNi06h3H9aheytZbn6l3a7\nN2F3VafRz99vLx3k7eqYUOioxIf0wvY8ZtL+QGrmrJjrU5Nnqk+3yQzkMQkCMW4H\nSyYNEjMm4bnGHIKe7/LLQYppO6yEP4xPH1MF60MfkHaXiJbZ2oiDK9ZklujOIbV7\nadeW31GUOnr3FUTL502jpX3CMxVx4FuawLgFuft+pMi3mHkJbjKsiLvFP087ksND\nbUc7ybzcN9bmm0IxdO56CYMQAJ+1xiYd6ayQcqTLcnxAJfl1SGPIx9IXHobwuBNy\n1XpPIcUZAgMBAAECggEBAJ0wkVWYjbmFBjSIqfn1kPcYJ5Tga6fk8TCylj4GdoCr\nJHzr6/MHQ4XIq7sqALNPTpIxCO09CDw+ERqyhCZgz67QE293p6pCRqrq1OGFXDUP\nKmwvgLfCh6ueWD9V1iW8wdWo8oYNTpXT0tCx/aL/+nRaiIdBlBU4uxep7BVYzGeC\ne9t6wxX2Op2zVMBYNromdU2xML+sMRUCijTA6kMdm6GPg1145ozCSrRUYP5vykHQ\nEokmArcPtTLVLxA5+uCj7Y6FF58ML7rC8kTt2ikRFGURRlK0GZOSGgwekNRZV32P\niswCeWkgWoWEQ5NAbuELD+WCo1ivEV7gAVbXq6O4mPECgYEA9RQe9+ukcrUWlZ+0\n1XoqS6qSXIhfgmB2POifMzFx2+ed6zlx5It5WtwdCMvnBtPMlQS60hpY+4DoNcJ+\naYjR/SLRmSHbkcwenm/mWXocO7JgyzBqn2YkIhWqaRcgQLvBs6VNnF75HrCbihwP\ncteQqHrzjV4J3smhBpS5xgmhRKMCgYEA2jybjunhtx8fLLq0IaOnb2SprsVorWJq\nc8eg4k3A3j4Xf/PRqpx3YSpZZBrn7wrtj9Y2WWbJgBJIs+hy8yQo6vMOA9w11F45\nPfns5sjIvmqK6mFNC1bP4vm6Q/gzW8NswpLKbfXSTnA917+C5mNEojwZ9Z+WJt2L\nozAtAuZtbxMCgYAE+jKi0FtXpQvfYA35I/EF9mHglThzWmgsVoEdNgzc7XhMla8V\neCuvx7ajPhjkD5shD6aHq9dQzE5rARc2J3w0Sue8124xKNcaWqVv/cXjBH1owwP3\nVsi3FH+QgNK73dRSRLIt0dP3ZpjSFj3OFEiw00ZtAZLrvmaRzqVzOzDWRwKBgQCE\nXCXss6UWL2X09vexP1SZlu/i9A/cuMffmL/XAVlscTRHglUzqNousESvFjJ9JJ+Y\nkU89Qb4MUwqNMvokxVWbyfZCGRj8yHjnQeGQx04ZTv0Z0hGsQuaqvtNdzfc4PHqG\nOAlWT7VRpXmclKaLnMFPtCv6cOPchpneS6XBEIhmyQKBgC3r9z1v6ydO/qX5uZfm\n9idRFwVaCO/2t/cFTo/nYC27BWe3nTNq+ZJHCQnABOfjOsqrHbS5/GKXr4wbw3DF\nAw0gz/pFniitO3EM11YQZdAq71SAbDdqorWDe8ynM3pJD3Eqkym3T9+jKkcSK4Nn\nfWQ6tkNi+yViyHmcc6vhau+t\n-----END PRIVATE KEY-----\n",
+  "client_email": "venerablekryten@venerablekryten.iam.gserviceaccount.com",
+  "client_id": "106716769471142217479",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/venerablekryten%40venerablekryten.iam.gserviceaccount.com"
+}

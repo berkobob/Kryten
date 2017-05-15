@@ -1,0 +1,74 @@
+#!/bin/bash
+cd ~/Kryten
+echo
+echo INSTALLING KRYTEN
+echo NB This may take some time
+echo
+echo 1. Update Pi
+echo Update package library
+#sudo apt-get update > install.log
+echo Update software
+#sudo apt-get upgrade -y >> install.log
+echo Update Jessie OS
+#sudo apt-get dist-upgrade >> install.log
+echo Pi updated
+echo
+echo 2. Install sound
+echo 2.1 Install Swig 3.0.12
+echo     install libbz2-dev
+#sudo apt-get install --upgrade -y libbz2-dev >> install.log 
+echo     install libreadline-dev 
+#sudo apt-get install --upgrade -y libreadline-dev >> install.log
+echo     downloading PCRE 8.4
+#wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.bz2 >> install.log
+echo     Unzipping
+#tar xjf pcre-8.40.tar.bz2 >> install.log
+echo     deleting download
+#rm *.bz2
+cd pcre-8.40 
+echo     configure PCRE
+#./configure --prefix=/usr                     \
+#            --docdir=/usr/share/doc/pcre-8.40 \
+#            --enable-unicode-properties       \
+#            --enable-pcre16                   \
+#            --enable-pcre32                   \
+#            --enable-pcregrep-libz            \
+#            --enable-pcregrep-libbz2          \
+#            --enable-pcretest-libreadline     \
+#            --disable-static >> install.log
+echo     make PCRE
+#make >> install.log
+echo     make install
+#sudo make install >> install.log
+#sudo mv -v /usr/lib/libpcre.so.* /lib
+#sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+echo     PCRE installed
+cd ~/Kryten
+echo     downloading swig
+wget downloads.sourceforge.net/swig/swig-3.0.12.tar.gz >> install.log
+echo     unzipping
+tar -xzvf swig-3.0.12.tar.gz >> install.log
+echo     deleting download
+rm *.gz
+cd swig-3.0.12
+echo     configure
+./configure --prefix=/usr --without-clisp --without-maximum-compile-warnings >> install.log
+echo     make
+make >> install.log
+#PY3=1 make check-python-examples  >> install.log
+#PY3=1 make check-python-test-suite >> install.log
+echo    install
+sudo make install >> install.log
+sudo install -v -m755 -d /usr/share/doc/swig-3.0.12 >> install.log
+sudo cp -v -R Doc/* /usr/share/doc/swig-3.0.12 >> install.log
+echo    Swig installed
+cd ..
+sudo apt-get install --upgrade -y libatlas-base-dev
+sudo apt-get install --upgrade -y portaudio19-dev
+sudo apt-get install --upgrade -y python3-all-dev
+sudo apt-get install libboost-all-dev
+sudo pip3 install --upgrade pyaudio
+git clone https://github.com/Kitt-AI/snowboy 
+cd snowboy/swig/Python3
+make
+
