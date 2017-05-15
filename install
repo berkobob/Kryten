@@ -1,5 +1,11 @@
 #!/bin/bash
-cd ~/Kryten
+rm ../Music -r
+rm ../oldconffiles -r
+rm ../Pictures -r
+rm ../Templates -r
+rm ../Videos -r
+rm ../Public -r
+
 echo
 echo INSTALLING KRYTEN
 echo NB This may take some time
@@ -27,15 +33,15 @@ echo     deleting download
 #rm *.bz2
 cd pcre-8.40 
 echo     configure PCRE
-#./configure --prefix=/usr                     \
-#            --docdir=/usr/share/doc/pcre-8.40 \
-#            --enable-unicode-properties       \
-#            --enable-pcre16                   \
-#            --enable-pcre32                   \
-#            --enable-pcregrep-libz            \
-#            --enable-pcregrep-libbz2          \
-#            --enable-pcretest-libreadline     \
-#            --disable-static >> install.log
+./configure --prefix=/usr                     \
+            --docdir=/usr/share/doc/pcre-8.40 \
+            --enable-unicode-properties       \
+            --enable-pcre16                   \
+            --enable-pcre32                   \
+            --enable-pcregrep-libz            \
+            --enable-pcregrep-libbz2          \
+            --enable-pcretest-libreadline     \
+            --disable-static >> install.log
 echo     make PCRE
 #make >> install.log
 echo     make install
@@ -66,9 +72,28 @@ cd ..
 sudo apt-get install --upgrade -y libatlas-base-dev
 sudo apt-get install --upgrade -y portaudio19-dev
 sudo apt-get install --upgrade -y python3-all-dev
-sudo apt-get install libboost-all-dev
+sudo apt-get install --upgrade -y libboost-all-dev
 sudo pip3 install --upgrade pyaudio
 git clone https://github.com/Kitt-AI/snowboy 
 cd snowboy/swig/Python3
 make
+cp *.so ~/Kryten
+cp *.py ~/Kryten
+cd ~/Kryten
+cp snowboy/examples/Python3/snowboydecoder.py .
+cp snowboy/examples/Python3/resources/common.res resources
+cp snowboy/examples/Python3/resources/ding.wav resources
+cp resources/Kryten.pmdl .
+cp resources/.asoundrc ~
+cp resources/.bashrc ~
+sudo cp resources/alsa.conf /usr/share/alsa
+sudo mv /usr/share/alsa/alsa.conf.d /usr/share/alsa/alsa.conf.backup
+sudo apt-get install --upgrade -y jackd2
+sudo apt-get install --upgrade -y flac
+sudo pip3 install --upgrade speechRecognition
+sudo pip3 install --upgrade google-api-python-client
+export GOOGLE_APPLICATION_CREDENTIALS=resources/Kryten.json
+jack_control start
+sudo apt-get install --upgrade -y python3-espeak
+
 
