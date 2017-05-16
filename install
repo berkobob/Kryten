@@ -12,25 +12,25 @@ echo NB This may take some time
 echo
 echo 1. Update Pi
 echo Update package library
-#sudo apt-get update > install.log
+sudo apt-get update
 echo Update software
-#sudo apt-get upgrade -y >> install.log
+sudo apt-get upgrade -y 
 echo Update Jessie OS
-#sudo apt-get dist-upgrade >> install.log
+sudo apt-get dist-upgrade 
 echo Pi updated
 echo
 echo 2. Install sound
 echo 2.1 Install Swig 3.0.12
 echo     install libbz2-dev
-#sudo apt-get install --upgrade -y libbz2-dev >> install.log 
+sudo apt-get install --upgrade -y libbz2-dev 
 echo     install libreadline-dev 
-#sudo apt-get install --upgrade -y libreadline-dev >> install.log
+sudo apt-get install --upgrade -y libreadline-dev 
 echo     downloading PCRE 8.4
-#wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.bz2 >> install.log
+wget https://sourceforge.net/projects/pcre/files/pcre/8.40/pcre-8.40.tar.bz2 
 echo     Unzipping
-#tar xjf pcre-8.40.tar.bz2 >> install.log
+tar xjf pcre-8.40.tar.bz2 
 echo     deleting download
-#rm *.bz2
+rm *.bz2
 cd pcre-8.40 
 echo     configure PCRE
 ./configure --prefix=/usr                     \
@@ -43,11 +43,11 @@ echo     configure PCRE
             --enable-pcretest-libreadline     \
             --disable-static >> install.log
 echo     make PCRE
-#make >> install.log
+make 
 echo     make install
-#sudo make install >> install.log
-#sudo mv -v /usr/lib/libpcre.so.* /lib
-#sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+sudo make install 
+sudo mv -v /usr/lib/libpcre.so.* /lib
+sudo ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
 echo     PCRE installed
 cd ~/Kryten
 echo     downloading swig
@@ -94,6 +94,7 @@ sudo pip3 install --upgrade speechRecognition
 sudo pip3 install --upgrade google-api-python-client
 export GOOGLE_APPLICATION_CREDENTIALS=resources/Kryten.json
 jack_control start
-sudo apt-get install --upgrade -y python3-espeak
-
-
+rm swig-3.0.12 -r -f
+rm pcre-8.40 -r -f
+rm snowboy -r -f
+#sudo apt-get install --upgrade -y python3-espeak

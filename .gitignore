@@ -1,2 +1,6 @@
 __pycache__
-
+_snowboydetect.so
+resources/common.res
+resources/ding.wav
+snowboydecoder.py
+snowboydetect.py
