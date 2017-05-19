@@ -1,4 +1,6 @@
 #!/bin/bash
+set -x
+trap read debug
 rm ../Music -r
 rm ../oldconffiles -r
 rm ../Pictures -r
@@ -97,4 +99,6 @@ jack_control start
 rm swig-3.0.12 -r -f
 rm pcre-8.40 -r -f
 rm snowboy -r -f
-#sudo apt-get install --upgrade -y python3-espeak
+sudo pip3 install gtts --upgrade
+sudo pip3 install gtts
+sudo apt-get install --upgrade -y mpg321
