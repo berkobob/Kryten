@@ -85,6 +85,7 @@ cd ~/Kryten
 cp snowboy/examples/Python3/snowboydecoder.py .
 cp snowboy/examples/Python3/resources/common.res resources
 cp snowboy/examples/Python3/resources/ding.wav resources
+cp snowboy/examples/Python3/resources/dong.wav resources
 cp resources/Kryten.pmdl .
 cp resources/.asoundrc ~
 cp resources/.bashrc ~

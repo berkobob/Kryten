@@ -48,3 +48,12 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 
 silent! nmap <C-o> :NERDTreeToggle<CR>
 
+"Conque - bash in vim 
+let g:ConqueTerm_PyVersion = 3
+nmap <C-e> :ConqueTermVSplit bash<CR>
+let g:ConqueTerm_ReadUnfocused = 1
+let g:ConqueTerm_InsertOnEnter = 1
+let g:ConqueTerm_CWInsert = 1
+let g:ConqueTerm_ExecFileKey = '<F11>'
+
+set backspace=indent,eol,start
